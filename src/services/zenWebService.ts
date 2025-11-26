@@ -66,13 +66,11 @@ export const zenLogin = async (
   };
 
   // Request
-  return axios
-    .post(`${apiUrl}/api/ha/deviceList`, JSON.stringify(body), config)
-    .then(async function (response) {
-      const data = await response.data;
-
-      console.log(data);
-
-      return data.data;
-    });
+return axios
+  .post(`${apiUrl}/api/ha/deviceList`, body, config)
+  .then(async (response) => {
+    const data = response.data;
+    console.log(data);
+    return data.data;
+  });
 };
