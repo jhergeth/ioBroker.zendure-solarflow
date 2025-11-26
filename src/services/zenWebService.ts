@@ -66,6 +66,12 @@ export const zenLogin = async (
   };
 
   // Request
+  // Request
+adapter.log.info("Decoded Key: " + decodedAuthCloudKey);
+adapter.log.info("apiUrl: " + apiUrl);
+adapter.log.info("appKey: " + appKey);
+adapter.log.info("POST URL: " + `${apiUrl}/api/ha/deviceList`);
+adapter.log.info("Headers: " + JSON.stringify(headers));
 return axios
   .post(`${apiUrl}/api/ha/deviceList`, body, config)
   .then(async (response) => {
