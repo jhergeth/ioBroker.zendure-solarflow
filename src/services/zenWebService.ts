@@ -20,7 +20,8 @@ export const zenLogin = async (
     // Invalid
   }
 
-  const apiUrl = decodedAuthCloudKey.slice(0, lastDot);
+  // const apiUrl = decodedAuthCloudKey.slice(0, lastDot);
+  const apiUrl = "mqtt-eu.zen-iot.com";  //test
   const appKey = decodedAuthCloudKey.slice(lastDot + 1);
 
   const body = {
